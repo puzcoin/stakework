@@ -298,7 +298,7 @@ static void http_request_cb(struct evhttp_request* req, void* arg)
 static void http_reject_request_cb(struct evhttp_request* req, void*)
 {
     LogPrint("http", "Rejecting request while shutting down\n");
-    evhttp_send_error(req, HTTP_SERVUXSKAIL, nullptr);
+    evhttp_send_error(req, HTTP_SERVUNAVAIL, nullptr);
 }
 
 /** Event dispatcher thread */
